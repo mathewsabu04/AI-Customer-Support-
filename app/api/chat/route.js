@@ -38,7 +38,7 @@ export async function POST(req) {
     async start(controller) {
       const encoder = new TextEncoder(); // Create a TextEncoder to encode strings as Uint8Array
       try {
-        // Iterate over each chunk of the streaming response
+        // Ensure 'completion' is an async iterable
         for await (const chunk of completion) {
           const content = chunk.choices[0]?.delta?.content; // Extract the content from the chunk
           if (content) {
