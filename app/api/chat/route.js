@@ -39,7 +39,8 @@ export async function POST(req) {
       const encoder = new TextEncoder(); // Create a TextEncoder to encode strings as Uint8Array
       try {
         // Ensure 'completion' is an async iterable
-        for await (const chunk of completion) {
+        for await (const chunk of completion) 
+        {
           const content = chunk.choices[0]?.delta?.content; // Extract the content from the chunk
           if (content) {
             const text = encoder.encode(content); // Encode the content
