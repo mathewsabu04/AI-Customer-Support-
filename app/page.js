@@ -77,7 +77,7 @@ export default function Home() {
       bgcolor="#f0f2f5" // Light gray background color
     >
       <Typography variant="h4" gutterBottom>
-        Headstarter Support // Header text for the chat
+        Headstarter Support
       </Typography>
       <Stack
         direction="column" // Stack children vertically
@@ -116,7 +116,7 @@ export default function Home() {
                 maxWidth="80%" // Limit the width of the message bubble
                 boxShadow={1} // Apply a subtle shadow
               >
-                {msg.content} // Display the message content
+                {msg.content}
               </Box>
             </Box>
           ))}
@@ -138,7 +138,7 @@ export default function Home() {
             onClick={sendMessage} // Trigger sendMessage function on click
             sx={{ padding: "10px 20px", borderRadius: "8px" }} // Custom padding and rounded corners for the button
           >
-            Send // Button label
+            Send
           </Button>
         </Stack>
       </Stack>
